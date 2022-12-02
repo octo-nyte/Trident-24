@@ -292,6 +292,7 @@ step "send-an-email" {
 
     action {
         action_type = "Octopus.Email"
+        is_disabled = true
         properties = {
             Octopus.Action.Email.Body = "You can view the the deployment here: #{Octopus.Web.ServerUri}/app#/#{Octopus.Space.Id}/tasks/#{Octopus.Task.Id}"
             Octopus.Action.Email.Subject = "#{Email.Subject.Code}"
